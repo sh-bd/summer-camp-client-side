@@ -28,10 +28,10 @@ const Home = () => {
                 <ExtraSection></ExtraSection>
             </div>
             <div className="mt-14">
-                <PopularInstructor></PopularInstructor>
+                <PopularClass></PopularClass>
             </div>
             <div className="mt-14">
-                <PopularClass></PopularClass>
+                <PopularInstructor></PopularInstructor>
             </div>
         </>
 
