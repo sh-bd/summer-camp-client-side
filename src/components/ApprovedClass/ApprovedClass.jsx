@@ -80,7 +80,7 @@ const ApprovedClass = () => {
                         })
                     }
                 })
-                .catch(error=>{
+                .catch(error => {
                     Swal.fire({
                         position: 'top-end',
                         icon: 'error',
@@ -104,9 +104,7 @@ const ApprovedClass = () => {
                 }
             })
         }
-
     }
-
 
     return (
         <div className="overflow-x-auto shadow-lg rounded-xl bg-slate-100">
@@ -135,7 +133,7 @@ const ApprovedClass = () => {
                                     <button
                                         onClick={() => handelEnroll(item)}
                                         className="btn btn-warning"
-                                        disabled={item.seat === 0 || isAdmin || isInstructor }
+                                        disabled={item.seat === 0 || isAdmin || isInstructor}
                                     >Select<FaArrowRight /></button>
                                 </div>
                             </div>
@@ -150,7 +148,3 @@ const ApprovedClass = () => {
 };
 
 export default ApprovedClass;
-
-// enrolledClasses.some((enrolledClass) => enrolledClass.classId === item._id)
-
-

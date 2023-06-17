@@ -21,17 +21,15 @@ const Home = () => {
             <Helmet>
                 <title>Home - Language School</title>
             </Helmet>
-            <div>
-                <Banner></Banner>
-            </div>
-            <div className="mt-14">
-                <ExtraSection></ExtraSection>
-            </div>
+            <Banner></Banner>
             <div className="mt-14">
                 <PopularClass></PopularClass>
             </div>
             <div className="mt-14">
                 <PopularInstructor></PopularInstructor>
+            </div>
+            <div className="mt-14">
+                <ExtraSection></ExtraSection>
             </div>
         </>
 
