@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import useAuth from "../../../../hooks/useAuth";
 
-
 const PaymentCheckoutForm = ({ price, loadedData }) => {
     const stripe = useStripe();
     const elements = useElements();
@@ -32,17 +31,14 @@ const PaymentCheckoutForm = ({ price, loadedData }) => {
         if (!stripe || !elements) {
             return
         }
-
         const card = elements.getElement(CardElement);
         if (card === null) {
             return
         }
-
         const { error } = await stripe.createPaymentMethod({
             type: 'card',
             card
         })
-
         if (error) {
             console.log('error', error)
             setCardError(error.message);
@@ -50,7 +46,6 @@ const PaymentCheckoutForm = ({ price, loadedData }) => {
         else {
             setCardError('');
         }
-
         setProcessing(true)
 
         const { paymentIntent, error: confirmError } = await stripe.confirmCardPayment(
@@ -71,7 +66,6 @@ const PaymentCheckoutForm = ({ price, loadedData }) => {
         }
 
         console.log('payment intent', paymentIntent)
-
 
         setProcessing(false)
 
@@ -111,7 +105,6 @@ const PaymentCheckoutForm = ({ price, loadedData }) => {
         }
     }
 
-
     return (
         <>
             <form className="w-2/3 m-8 lg:mx-auto" onSubmit={handleSubmit}>
@@ -131,7 +124,6 @@ const PaymentCheckoutForm = ({ price, loadedData }) => {
                         },
                     }}
                 />
-
                 <button
                     disabled={!stripe || !clientSecret || processing}
                     className="btn btn-primary btn-sm mt-4" type="submit" >
