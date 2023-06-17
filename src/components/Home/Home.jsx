@@ -7,11 +7,9 @@ import Loader from "../Loader/Loader";
 import PopularClass from "../PopularClass/PopularClass";
 import PopularInstructor from "../PopularInstructor/PopularInstructor";
 
-
 const Home = () => {
 
     const { loading } = useAuth();
-
     if (loading) {
         return <Loader></Loader>
     }
@@ -32,7 +30,6 @@ const Home = () => {
                 <ExtraSection></ExtraSection>
             </div>
         </>
-
     );
 };
 
