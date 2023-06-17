@@ -77,7 +77,7 @@ const ManageUsers = () => {
     return (
         <div className='w-full h-full'>
             <Helmet>
-                <title>Camp Arena | Manage Users</title>
+                <title>Language School | Manage Users</title>
             </Helmet>
             <div className="overflow-x-auto">
                 <SectionTitle heading='Manage Users' />

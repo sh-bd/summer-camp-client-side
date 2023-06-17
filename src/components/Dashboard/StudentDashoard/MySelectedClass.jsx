@@ -55,7 +55,7 @@ const MySelectedClass = () => {
     return (
         <div className='w-full h-full'>
             <Helmet>
-                <title>Camp Arena | Selected Classes</title>
+                <title>Language School | Selected Classes</title>
             </Helmet>
             <div>
                 <SectionTitle heading='Selected Classes' />

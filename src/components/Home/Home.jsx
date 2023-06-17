@@ -1,12 +1,12 @@
 
-import Loader from "../Loader/Loader";
-import Banner from "../Banner/Banner";
+import { Helmet } from 'react-helmet-async';
 import useAuth from "../../hooks/useAuth";
-import PopularClass from "../PopularClass/PopularClass";
-import PopularInstructor from "../PopularInstructor/PopularInstructor";
+import Banner from "../Banner/Banner";
 import ExtraSection from "../ExtraSection/ExtraSection";
 import ExtraSection2 from "../ExtraSection/ExtraSection2";
-import { Helmet } from 'react-helmet-async';
+import Loader from "../Loader/Loader";
+import PopularClass from "../PopularClass/PopularClass";
+import PopularInstructor from "../PopularInstructor/PopularInstructor";
 
 
 const Home = () => {
@@ -20,7 +20,7 @@ const Home = () => {
     return (
         <>
             <Helmet>
-                <title>Camp Arena | Home</title>
+                <title>Language School | Home</title>
             </Helmet>
             <div>
                 <Banner></Banner>

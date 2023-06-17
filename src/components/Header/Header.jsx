@@ -40,30 +40,31 @@ const Header = () => {
     }
 
 
-    const navItems = <>
+    const navItems =
+        <>
 
-        <li> <Link className='font-semibold' to="/">Home</Link> </li>
-        <li> <Link className='font-semibold' to="/instructors">Instructors</Link> </li>
-        <li> <Link className='font-semibold' to="/classes">Classes</Link> </li>
+            <li> <Link className='font-semibold' to="/">Home</Link> </li>
+            <li> <Link className='font-semibold' to="/instructors">Instructors</Link> </li>
+            <li> <Link className='font-semibold' to="/classes">Classes</Link> </li>
 
-        {
-            isAdmin || isAdminLoading ? <>
-                <li><Link className='font-semibold' to="/dashboard/admin/manageClass">Dashboard</Link></li>
-            </>
-                : isInstructor || isInstructorLoading ? <>
-                    <li><Link className='font-semibold' to="/dashboard/instructor/myClass">Dashboard</Link></li>
+            {
+                isAdmin || isAdminLoading ? <>
+                    <li><Link className='font-semibold' to="/dashboard/admin/manageClass">Dashboard</Link></li>
                 </>
-                    : <>
-                        <li><Link className='font-semibold' to="/dashboard/student/mySelectedClass">Dashboard</Link></li>
+                    : isInstructor || isInstructorLoading ? <>
+                        <li><Link className='font-semibold' to="/dashboard/instructor/myClass">Dashboard</Link></li>
                     </>
-        }
+                        : <>
+                            <li><Link className='font-semibold' to="/dashboard/student/mySelectedClass">Dashboard</Link></li>
+                        </>
+            }
 
 
 
 
 
 
-    </>
+        </>
 
     const btn = <>
         <button onClick={handleLogOut} className='btn btn-info'>Log out</button>
@@ -82,7 +83,7 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className='w-14 lg:w-52'>
-                    <h2 className='font-bold lg:text-3xl'>CAMP <span className='text-red-600 font-semibold'>ARENA</span></h2>
+                    <h2 className='font-bold lg:text-3xl'>Language <span className='text-red-600 font-semibold'>School</span></h2>
                 </div>
 
 

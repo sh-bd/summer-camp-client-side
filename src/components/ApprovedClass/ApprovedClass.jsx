@@ -111,7 +111,7 @@ const ApprovedClass = () => {
     return (
         <div className="overflow-x-auto shadow-lg rounded-xl bg-slate-100">
             <Helmet>
-                <title>Camp Arena | Class</title>
+                <title>Language School | Class</title>
             </Helmet>
             <SectionTitle heading='All Classes' />
             <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-10 p-5'>

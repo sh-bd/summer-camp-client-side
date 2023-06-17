@@ -41,7 +41,7 @@ const Instructors = () => {
     return (
         <div className='shadow-2xl rounded-lg bg-slate-100'>
             <Helmet>
-                <title>Camp Arena | Instructors</title>
+                <title>Language School | Instructors</title>
             </Helmet>
             <SectionTitle heading='Instructors' />
             <div className="overflow-x-auto">

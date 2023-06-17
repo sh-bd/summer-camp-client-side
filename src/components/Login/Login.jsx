@@ -1,11 +1,11 @@
-import { Link, useLocation, useNavigate } from "react-router-dom";
 import Lottie from "lottie-react";
-import login from '../../../public/121421-login.json';
-import { useForm } from "react-hook-form";
 import { useContext, useState } from "react";
+import { Helmet } from "react-helmet-async";
+import { useForm } from "react-hook-form";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import login from '../../../public/121421-login.json';
 import { AuthContext } from "../../providers/AuthProvider";
 import SocialLogin from "../SocialLogin/SocialLogin";
-import { Helmet } from "react-helmet-async";
 
 const Register = () => {
     const [error, setError] = useState('')
@@ -41,7 +41,7 @@ const Register = () => {
     return (
         <div className="grid md:grid-cols-2 mx-auto">
             <Helmet>
-                <title>Camp Arena | Login</title>
+                <title>Language School | Login</title>
             </Helmet>
             <div className="hero">
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-slate-300">

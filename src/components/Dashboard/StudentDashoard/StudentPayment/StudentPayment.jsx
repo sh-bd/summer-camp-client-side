@@ -18,7 +18,7 @@ const StudentPayment = () => {
     return (
         <div className='w-full h-full'>
             <Helmet>
-                <title>Camp Arena | Payment</title>
+                <title>Language School | Payment</title>
             </Helmet>
             <SectionTitle subHeading='Please pay for your selected class' heading='Payment' />
             <div className='bg-base-100 p-8 m-8 card shadow-2xl '>

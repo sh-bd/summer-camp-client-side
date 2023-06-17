@@ -107,7 +107,7 @@ const ManageClass = () => {
     return (
         <div className='w-full h-full'>
             <Helmet>
-                <title>Camp Arena | Manage Classes</title>
+                <title>Language School | Manage Classes</title>
             </Helmet>
             <div className="overflow-x-auto shadow-xl">
                 <SectionTitle heading='Manage Classes' />

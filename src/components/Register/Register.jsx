@@ -59,7 +59,7 @@ const Register = () => {
     return (
         <div className="grid md:grid-cols-2 mx-auto">
             <Helmet>
-                <title>Camp Arena | Registration</title>
+                <title>Language School | Registration</title>
             </Helmet>
             <div>
                 <h2>

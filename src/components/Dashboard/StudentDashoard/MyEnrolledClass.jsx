@@ -31,7 +31,7 @@ const MyEnrolledClass = () => {
     return (
         <div className='w-full h-full'>
             <Helmet>
-                <title>Camp Arena | Enrolled Classes</title>
+                <title>Language School | Enrolled Classes</title>
             </Helmet>
             <div className="overflow-x-auto">
                 <SectionTitle heading='Enrolled Classes' />
