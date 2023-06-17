@@ -90,7 +90,7 @@ const AddClass = () => {
     return (
         <div className="h-full">
             <Helmet>
-                <title>Language School | Add a New Class</title>
+                <title>Add a New Class - Language School</title>
             </Helmet>
             <div>
             <SectionTitle heading='Add a  New Class' />

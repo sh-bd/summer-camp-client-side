@@ -20,7 +20,7 @@ const Home = () => {
     return (
         <>
             <Helmet>
-                <title>Language School | Home</title>
+                <title>Home - Language School</title>
             </Helmet>
             <div>
                 <Banner></Banner>

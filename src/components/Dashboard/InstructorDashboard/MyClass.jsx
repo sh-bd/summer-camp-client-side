@@ -30,7 +30,7 @@ const MyClass = () => {
     return (
         <div className='w-full h-full'>
             <Helmet>
-                <title>Language School | My Classes</title>
+                <title>My Classes - Language School</title>
             </Helmet>
             <div className="overflow-x-auto">
                 <SectionTitle heading='My Classes' />

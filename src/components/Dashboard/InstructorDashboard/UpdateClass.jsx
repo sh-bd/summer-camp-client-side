@@ -173,7 +173,7 @@ const UpdateClass = ({ }) => {
     return (
         <div className='h-full'>
             <Helmet>
-                <title>Language School | Update Class</title>
+                <title>Update Class - Language School</title>
             </Helmet>
             <div>
                 <SectionTitle heading='Update Class'></SectionTitle>

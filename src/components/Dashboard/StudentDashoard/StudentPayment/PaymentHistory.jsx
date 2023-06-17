@@ -31,7 +31,7 @@ const PaymentHistory = () => {
     return (
         <div className='h-full w-full'>
             <Helmet>
-                <title>Language School | Payment History</title>
+                <title>Payment History - Language School</title>
             </Helmet>
             <div>
                 <SectionTitle heading='payment History' />
