@@ -1,19 +1,52 @@
-## Hello, there is some features and live website link of this project.
+# Summer Camp Client
+This repo is for the client side of Summer Camp Website.
 
-- Firebase Live Link -> https://summer-camp-client-side-821c4.web.app/
+## Preview
 
+Client link – [https://summer-camp-sh4mim.netlify.app/](https://summer-camp-sh4mim.netlify.app/)
 
-- First we create a navbar and there contains a name and some links and the navbar and footer is common for all the roots except 404 page.
-- Than the banner section with react swiper slider.
-- Then the popular class section those are enrolled most.
-- Then the popular instructor section with marque.
-- and then a blog,
-- and some animations,
-- and the footer.
-- there 3 role of projects admin, instructor and student.
-- student can select course and can payment, can see payment history.
-- Instructor ca add class and see the classes.
--admin can approve the class and make anyone admin or instructor.
-- there are using mongdb for data base..
--Basically this is a mern stack project.
--Backend and Frontend is existing for the project.
+Server link - [https://summer-camp-server-sh4mim.vercel.app/](https://summer-camp-server-sh4mim.vercel.app/)
+
+Client repository - [https://github.com/programming-hero-web-course1/b712-summer-camp-client-side-sh-bd](https://github.com/programming-hero-web-course1/b712-summer-camp-client-side-sh-bd)
+
+Server repository - [https://github.com/programming-hero-web-course1/b7a12-summer-camp-server_side-sh-bd](https://github.com/programming-hero-web-course1/b7a12-summer-camp-server_side-sh-bd)
+
+## Languages and Tools:
+<div align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg" height="40" width="52" alt="html5 logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg" height="40" width="52" alt="css3 logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" width="52" alt="javascript logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" height="40" width="52" alt="bootstrap logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" height="40" width="52" alt="react logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" height="40" width="52" alt="nodejs logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain-wordmark.svg" height="40" width="52" alt="firebase logo"  />  
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" height="40" width="52" alt="mongodb logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" height="40" width="52" alt="npm logo"  />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-plain-wordmark.svg" height="40" width="52" alt="git logo"  />
+</div>
+
+## Run Locally
+
+Clone the project
+
+```bash
+  git clone https://github.com/programming-hero-web-course1/b712-summer-camp-client-side-sh-bd.git
+```
+
+Go to the project directory
+
+```bash
+  cd b712-summer-camp-client-side-sh-bd
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run dev
+```
