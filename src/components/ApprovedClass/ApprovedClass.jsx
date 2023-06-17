@@ -11,18 +11,12 @@ import useInstructor from '../../hooks/useInstructor';
 import Loader from '../Loader/Loader';
 import SectionTitle from '../SectionTitle/SectionTitle';
 
-
-
-
 const ApprovedClass = () => {
     const { loading, user } = useAuth();
     const navigate = useNavigate();
     const location = useLocation();
-
     const [isAdmin] = useAdmin();
     const [isInstructor] = useInstructor();
-
-
     const token = localStorage.getItem('access-token');
 
     const { data: approvedClass = [], refetch } = useQuery(['approvedClass'], async () => {
@@ -44,8 +38,7 @@ const ApprovedClass = () => {
 
     const handelEnroll = item => {
 
-        console.log(item);
-
+        // console.log(item);
         if (user && user.email) {
             const cartItem = {
                 classId: item._id,
@@ -142,7 +135,6 @@ const ApprovedClass = () => {
                 }
             </div>
             <ToastContainer />
-
         </div>
     );
 };
