@@ -58,17 +58,12 @@ const Header = () => {
                             <li><Link className='font-semibold' to="/dashboard/student/mySelectedClass">Dashboard</Link></li>
                         </>
             }
-
-
-
-
-
-
         </>
 
-    const btn = <>
-        <button onClick={handleLogOut} className='btn btn-warning'>Log out</button>
-    </>
+    const btn =
+        <>
+            <button onClick={handleLogOut} className='btn btn-warning'>Log out</button>
+        </>
     // fixed z-10 bg-opacity-30
     return (
         <div className="navbar bg-slate-200 h-28 mb-4 rounded-lg shadow-xl">
@@ -109,21 +104,21 @@ const Header = () => {
                 </div>
                 <div className=' flex items-center gap-4'>
                     {
-                        user?.email ? <>
-
-                            <div className=' w-12 mt-1'>
-                                <div className="tooltip tooltip-bottom" data-tip={user?.displayName}>
-                                    <img className='rounded-full cursor-pointer' src={user?.photoURL} alt="" />
+                        user?.email ?
+                            <>
+                                <div className=' w-12 mt-1 ms-3'>
+                                    <div className="tooltip tooltip-bottom" data-tip={user?.displayName}>
+                                        <img className='rounded-full cursor-pointer' src={user?.photoURL} alt="" />
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="navbar-center hidden lg:flex">
-                                <ul className="menu menu-horizontal px-1">
-                                    {btn}
-                                </ul>
-                            </div>
+                                <div className="navbar-center hidden lg:flex">
+                                    <ul className="menu menu-horizontal px-1">
+                                        {btn}
+                                    </ul>
+                                </div>
 
-                        </>
-                            : <Link to="/login"><button className='btn btn-info'>Login</button></Link>
+                            </>
+                            : <Link to="/login"><button className='btn btn-warning ms-3'>Login</button></Link>
                     }
                 </div>
             </div>
