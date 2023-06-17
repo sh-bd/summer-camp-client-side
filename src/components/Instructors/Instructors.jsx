@@ -13,12 +13,9 @@ import SectionTitle from '../SectionTitle/SectionTitle';
 const Instructors = () => {
 
     const {loading} = useAuth();
-
-
     const handleFavoriteButton = () => {
         toast("Added to favorites!");
     };
-
 
     const token = localStorage.getItem('access-token');
 
@@ -35,8 +32,6 @@ const Instructors = () => {
     if(loading){
         return <Loader></Loader>
     }
-
-
 
     return (
         <div className='shadow-2xl rounded-lg bg-slate-100'>
