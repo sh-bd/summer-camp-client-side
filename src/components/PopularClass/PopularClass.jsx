@@ -10,20 +10,12 @@ import useInstructor from '../../hooks/useInstructor';
 import Loader from '../Loader/Loader';
 import SectionTitle from '../SectionTitle/SectionTitle';
 
-
-
-
-
-
 const PopularClass = () => {
     const { loading, user } = useAuth();
     const navigate = useNavigate();
     const location = useLocation();
-
     const [isAdmin] = useAdmin();
     const [isInstructor] = useInstructor();
-
-
     const token = localStorage.getItem('access-token');
 
     const { data: approvedClass = [], refetch } = useQuery(['approvedClass'], async () => {
@@ -71,7 +63,6 @@ const PopularClass = () => {
                 .then(data => {
                     if (data.insertedId) {
                         refetch();
-                        // setEnrolledClasses([...enrolledClasses, cartItem]);
                         Swal.fire({
                             position: 'top-end',
                             icon: 'success',
@@ -105,11 +96,7 @@ const PopularClass = () => {
                 }
             })
         }
-
     }
-
-
-
 
     return (
         <div className="overflow-x-auto shadow-lg rounded-xl bg-slate-100">
@@ -147,7 +134,6 @@ const PopularClass = () => {
                 }
             </div>
             <ToastContainer />
-
         </div>
     );
 };
