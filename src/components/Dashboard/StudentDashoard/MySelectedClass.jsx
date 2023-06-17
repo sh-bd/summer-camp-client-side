@@ -7,12 +7,8 @@ import Swal from 'sweetalert2';
 import useCart from '../../../hooks/useCart';
 import SectionTitle from '../../SectionTitle/SectionTitle';
 
-
 const MySelectedClass = () => {
-
-
     const [cart, refetch] = useCart();
-
     const handelDeleteClass = (_id) => {
         console.log(_id);
         Swal.fire({
