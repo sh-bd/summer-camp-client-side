@@ -5,15 +5,12 @@ import { Helmet } from 'react-helmet-async';
 import { useLoaderData } from 'react-router-dom';
 import SectionTitle from '../../../SectionTitle/SectionTitle';
 import PaymentCheckoutForm from './PaymentChekOutForm';
-
 const stripePromise = loadStripe(import.meta.env.VITE_PAYMENT_GATEWAY_PK);
 
 const StudentPayment = () => {
-
     const loadedData = useLoaderData();
     console.log(loadedData);
     const price = parseFloat(loadedData.price.toFixed(2));
-
 
     return (
         <div className='w-full h-full'>
