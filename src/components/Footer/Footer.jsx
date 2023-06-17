@@ -6,7 +6,6 @@ const Footer = () => {
         <div>
             <footer className="footer footer-center p-10 bg-slate-800 text-primary-content rounded-lg shadow-lg">
                 <div>
-                    {/* <Lottie className='w-24' animationData={g2}></Lottie> */}
                     <p className="font-bold">Copyright © 2023 - All right reserved by <Link to={'/'}>Language School</Link></p>
                 </div>
                 <div>
