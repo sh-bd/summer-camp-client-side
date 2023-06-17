@@ -96,24 +96,19 @@ const PaymentCheckoutForm = ({ price, loadedData }) => {
             axios.post('https://summer-camp-server-sh4mim.vercel.app/payments', payment)
                 .then(res => {
                     console.log(res.data);
-                    if (res.data.insertResult.insertedId && res.data.deleteResult.deletedCount === 1) {                 
+                    if (res.data.insertResult.insertedId && res.data.deleteResult.deletedCount === 1) {
                         Swal.fire({
                             position: 'center',
                             icon: 'success',
                             title: 'Your payment is successful!',
                             showConfirmButton: false,
                             timer: 1500
-                          })
-                          navigate('/dashboard/student/myEnrolledClass');
+                        })
+                        navigate('/dashboard/student/myEnrolledClass');
                     }
                 })
-                
+
         }
-
-
-
-
-
     }
 
 

@@ -96,17 +96,12 @@ const MySelectedClass = () => {
                                         <td className="text-center">{item.seat}</td>
                                         <td className="text-center">{'$' + item.price}</td>
                                         <td className="text-center">
-                                            {/* <Link to='/dashboard/student/payment'>
-                                        <button
-                                        onClick={()=>handelPayment(item.price)}
-                                            className="text-center btn btn-info">Pay</button>
-                                        </Link> */}
                                             <Link
                                                 to={`/dashboard/student/payment/${item._id}`}
                                             >
                                                 <button
                                                     onClick={() => handelPayment(item._id)}
-                                                    className="text-center btn btn-info"
+                                                    className="text-center btn btn-warning"
                                                 >
                                                     Pay
                                                 </button>
@@ -116,7 +111,7 @@ const MySelectedClass = () => {
                                         <td className="text-center">
                                             <button
                                                 onClick={() => handelDeleteClass(item._id)}
-                                                className="text-center btn btn-info"><FaTrashAlt /></button>
+                                                className="text-center btn btn-error"><FaTrashAlt /></button>
                                         </td>
                                     </tr>
                                 ))}

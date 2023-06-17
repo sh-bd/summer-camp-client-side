@@ -134,10 +134,10 @@ const PopularClass = () => {
                                 <div className="card-actions justify-between">
                                     <button
                                         onClick={handleFavoriteButton}
-                                        className="btn bg-red-400"><FaHeart /></button>
+                                        className="btn btn-error"><FaHeart /></button>
                                     <button
                                         onClick={() => handelEnroll(item)}
-                                        className="btn btn-success"
+                                        className="btn btn-warning"
                                         disabled={item.seat === 0 || isAdmin || isInstructor}
                                     >Select<FaArrowRight /></button>
                                 </div>

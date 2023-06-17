@@ -72,7 +72,7 @@ const Instructors = () => {
                                     <td className='text-center text-black'>{instructor.email}</td>
                                     <td className='text-center text-black'><button
                                         onClick={handleFavoriteButton}
-                                        className='btn btn-outline btn-error'><FaHeart/></button></td>
+                                        className='btn btn-outline btn-warning'><FaHeart/></button></td>
                                 </tr>)
                         }
 
