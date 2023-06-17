@@ -55,41 +55,28 @@ const Banner = () => {
             >
                 <div>
                     <img
-                        src="https://i.ibb.co/J72gwbk/toomas-tartes-Yizrl9-N-e-DA-unsplash.jpg"
-                        alt="Image 1"
-                    />
-                    <div className="text-overlay">
-                        <h2 className='text-white-800 text-2xl lg:text-4xl font-bold uppercase text-amber-400'>Explore Your Camping <br /> <span className='text-slate-950 font-bold'>Like an Adventure!!</span></h2>
-                        <hr />
-                    </div>
-                </div>
-                <div>
-                    <img
-                        src="https://i.ibb.co/2y7bQmT/luke-porter-m-GFJIUD9yi-M-unsplash.jpg"
-                        alt="Image 2"
-                    />
-                </div>
-                
-                <div>
-                    <img
-                        src="https://i.ibb.co/TTm0Lvr/artem-kniaz-Dqg-MHzeio7g-unsplash.jpg"
+                        src="https://thumbs.dreamstime.com/z/diverse-language-conversation-banner-concept-diverse-group-people-talking-different-languages-multi-cultural-team-concept-111498191.jpg"
                         alt="Image 3"
                     />
                 </div>
+                
                 <div>
                     <img
-                        src="https://i.ibb.co/Btpy6Zf/stephen-leonardi-6-E6o-Mx-69-Ns-unsplash.jpg"
+                        src="https://www.xploree.com/wp-content/uploads/2017/07/banner-8.jpg"
                         alt="Image 2"
                     />
                 </div>
+
+
                 <div>
                     <img
-                        src="https://i.ibb.co/s2HdjK6/group-girls-camping-forest.jpg"
+                        src="https://media.istockphoto.com/id/1254791418/vector/banner-with-little-peoplen-and-spanish-symbols.jpg?s=1024x1024&w=is&k=20&c=0FU6nc3ZVlwBYAZl575J3RhwxQVr87uQdTotcXqwAlQ="
                         alt="Image 2"
                     />
                 </div>
                 
-                
+
+
             </AutoplaySlider>
         </div>
     );

@@ -25,14 +25,14 @@ const Home = () => {
             <div>
                 <Banner></Banner>
             </div>
-            <div className="mt-24">
-                <PopularClass></PopularClass>
+            <div className="mt-14">
+                <ExtraSection></ExtraSection>
             </div>
             <div className="mt-14">
                 <PopularInstructor></PopularInstructor>
             </div>
-            <div className="mt-14">
-                <ExtraSection></ExtraSection>
+            <div className="mt-24">
+                <PopularClass></PopularClass>
             </div>
             <div className="mt-14">
                 <ExtraSection2></ExtraSection2>

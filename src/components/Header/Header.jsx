@@ -67,7 +67,7 @@ const Header = () => {
         </>
 
     const btn = <>
-        <button onClick={handleLogOut} className='btn btn-info'>Log out</button>
+        <button onClick={handleLogOut} className='btn btn-warning'>Log out</button>
     </>
     // fixed z-10 bg-opacity-30
     return (
