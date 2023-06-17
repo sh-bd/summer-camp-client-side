@@ -10,10 +10,8 @@ import SectionTitle from '../../../SectionTitle/SectionTitle';
 
 
 const ManageUsers = () => {
-
     const { logOut } = useAuth();
     const navigate = useNavigate();
-
     const token = localStorage.getItem('access-token');
 
     const { data: users = [], refetch } = useQuery(['users'], async () => {
@@ -32,7 +30,6 @@ const ManageUsers = () => {
             throw error;
         }
     });
-
 
     const handelMakeInstructor = (user) => {
         fetch(`https://summer-camp-server-sh4mim.vercel.app/users/instructor/${user._id}`, {
@@ -53,7 +50,6 @@ const ManageUsers = () => {
                 }
             })
     }
-
     const handelMakeAdmin = (user) => {
         fetch(`https://summer-camp-server-sh4mim.vercel.app/users/admin/${user._id}`, {
             method: 'PATCH'
@@ -113,7 +109,6 @@ const ManageUsers = () => {
                                                 className="btn bg-red-400 text-white">Set as Admin</button></td>
                                         </tr>)
                                 }
-
                             </tbody>
                         </table>
                     </Fade>
