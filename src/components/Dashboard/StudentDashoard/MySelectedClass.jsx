@@ -48,8 +48,7 @@ const MySelectedClass = () => {
     };
 
     const handelPayment = (id) => {
-        console.log(id);
-
+        // console.log(id);
     }
 
     return (
