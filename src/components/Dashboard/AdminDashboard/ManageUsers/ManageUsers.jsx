@@ -110,7 +110,7 @@ const ManageUsers = () => {
                                             <td className='text-center '><button
                                                 onClick={() => handelMakeAdmin(user)}
                                                 disabled={user.role === 'admin'}
-                                                className="btn bg-red-400">Set as Admin</button></td>
+                                                className="btn bg-red-400 text-white">Set as Admin</button></td>
                                         </tr>)
                                 }
 
