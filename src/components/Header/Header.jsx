@@ -94,9 +94,9 @@ const Header = () => {
                     {
                         user?.email ?
                             <>
-                                <div className=' w-12 mt-1 ms-3'>
+                                <div className='w-12 h-12 mt-1 ms-3 rounded-full overflow-hidden'>
                                     <div className="tooltip tooltip-bottom" data-tip={user?.displayName}>
-                                        <img className='rounded-full cursor-pointer' src={user?.photoURL} alt="" />
+                                        <img className='w-full h-full rounded-full object-cover cursor-pointer' src={user?.photoURL} alt="" />
                                     </div>
                                 </div>
                                 <div className="navbar-center hidden lg:flex">
