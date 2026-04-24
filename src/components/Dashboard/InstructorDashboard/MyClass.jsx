@@ -30,13 +30,13 @@ const MyClass = () => {
     return (
         <div className='w-full h-full'>
             <Helmet>
-                <title>My Classes - Language School</title>
+                <title>My Courses - Language School</title>
             </Helmet>
-            <div className="overflow-x-auto">
-                <SectionTitle heading='My Classes' />
-                <div className="overflow-x-auto m-8 card shadow-2xl">
+            <div className="w-full">
+                <SectionTitle heading='My Courses' />
+                <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-xl">
                     <Fade>
-                        <table className="table table-zebra w-full">
+                        <table className="table table-zebra w-full min-w-[980px]">
                             <thead>
                                 <tr className="bg-slate-400 text-slate-800">
                                     <th className='text-center'>Serial</th>
@@ -47,7 +47,7 @@ const MyClass = () => {
                                     <th className='text-center'>Seat</th>
                                     <th className='text-center'>Price</th>
                                     <th className='text-center'>Status</th>
-                                    <th className='text-center'>Enrolled Classes</th>
+                                    <th className='text-center'>Enrolled Courses</th>
                                     <th className='text-center'>Feedback</th>
                                     <th className='text-center'>Action</th>
                                 </tr>

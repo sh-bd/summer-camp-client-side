@@ -23,7 +23,7 @@ import NotFoundPage from './components/NotFoundPage/NotFoundPage';
 import Register from './components/Register/Register';
 import './index.css';
 import Dashboard from './layout/Dashboard';
-import Main from './Layout/Main';
+import Main from './layout/Main';
 import AuthProvider from './providers/AuthProvider';
 import AdminRoute from './route/AdminRoute';
 import InstructorRoute from './route/InstructorRoute';
@@ -33,6 +33,9 @@ import PrivateRoute from './route/PrivateRoute';
 
 
 const queryClient = new QueryClient()
+
+document.documentElement.setAttribute('data-theme', 'light');
+localStorage.removeItem('theme');
 
 
 const router = createBrowserRouter([
@@ -57,7 +60,7 @@ const router = createBrowserRouter([
         element: <Instructors></Instructors>,
       },
       {
-        path: '/classes',
+        path: '/courses',
         element: <ApprovedClass></ApprovedClass>
       },
     ]

@@ -75,11 +75,11 @@ const ManageUsers = () => {
             <Helmet>
                 <title>Manage Users - Language School</title>
             </Helmet>
-            <div className="overflow-x-auto">
+            <div className="w-full">
                 <SectionTitle heading='Manage Users' />
-                <div className="overflow-x-auto m-8 card shadow-2xl">
+                <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-xl">
                     <Fade>
-                        <table className="table table-zebra w-full">
+                        <table className="table table-zebra w-full min-w-[780px]">
                             {/* head */}
                             <thead>
                                 <tr className='bg-slate-400 text-slate-800'>

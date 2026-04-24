@@ -95,11 +95,11 @@ const AddClass = () => {
             <div>
             <SectionTitle heading='Add a  New Class' />
             </div>
-            <div className='bg-slate-200 rounded-lg shadow-xl mt-5 '>
+            <div className='mt-5 rounded-2xl border border-slate-200 bg-slate-100 shadow-xl'>
             
             <Fade>
-                <form onSubmit={handelAddClass} className='w-[80%] mx-auto '>
-                    <div className='grid grid-cols-2 gap-5'>
+                <form onSubmit={handelAddClass} className='w-full max-w-4xl mx-auto px-4 py-6 sm:px-6'>
+                    <div className='grid grid-cols-1 gap-5 md:grid-cols-2'>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Class Name*</span>
@@ -117,7 +117,7 @@ const AddClass = () => {
                             <input
                                 type="file"
                                 name="image"
-                                className="file-input file-input-bordered file-input-info w-full max-w-xs"
+                                className="file-input file-input-bordered file-input-info w-full"
                                 required
                             />
                         </div>

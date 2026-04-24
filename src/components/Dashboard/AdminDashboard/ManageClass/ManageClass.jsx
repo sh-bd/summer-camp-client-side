@@ -57,9 +57,6 @@ const ManageClass = () => {
         }
     };
 
-
-
-
     const handelApproved = (item) => {
         fetch(`https://summer-camp-server-sh4mim.vercel.app/users/status/${item._id}`, {
             method: 'PATCH',
@@ -102,18 +99,16 @@ const ManageClass = () => {
             })
     }
 
-
-
     return (
         <div className='w-full h-full'>
             <Helmet>
-                <title>Manage Classes - Language School</title>
+                <title>Manage Courses - Language School</title>
             </Helmet>
-            <div className="overflow-x-auto shadow-xl">
-                <SectionTitle heading='Manage Classes' />
-                <div className='overflow-x-auto m-8 card shadow-2xl'>
+            <div className="w-full">
+                <SectionTitle heading='Manage Courses' />
+                <div className='overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-xl'>
                     <Fade>
-                    <table className="table table-zebra w-full">
+                    <table className="table table-zebra w-full min-w-[900px]">
                         <thead>
                             <tr className='bg-slate-400 text-slate-800'>
                                 <th className="text-center">Serial</th>
@@ -124,7 +119,6 @@ const ManageClass = () => {
                                 <th className="text-center">Seat</th>
                                 <th className="text-center">Price</th>
                                 <th className="text-center">Status</th>
-                                <th className="text-center">Feedback</th>
                                 <th className="text-center">Action</th>
                             </tr>
                         </thead>
@@ -150,33 +144,6 @@ const ManageClass = () => {
                                         <td className="text-center">
                                             <button className="btn btn-sm">{item.status}</button>
                                         </td>
-                                        <td className="text-center">
-
-                                            <button className="btn btn-warning" onClick={() => handleOpenModal(item)}>
-                                                Send Feedback
-                                            </button>
-                                            <dialog id="my_modal_1" className="modal" ref={modalRef}>
-                                                <form method="dialog" className="modal-box">
-                                                    <h3 className="font-bold text-lg"
-                                                    >Feedback</h3>
-                                                    <textarea
-                                                        className="textarea textarea-info"
-                                                        value={feedback}
-                                                        onChange={(e) => setFeedback(e.target.value)}
-                                                    ></textarea>
-
-                                                    <div className="modal-action">
-                                                        <button className="btn btn-active btn-neutral" onClick={handleCloseModal}>
-                                                            Close
-                                                        </button>
-                                                        <button className="btn btn-info" onClick={handleUpdateFeedback}>
-                                                            Update
-                                                        </button>
-                                                    </div>
-                                                </form>
-                                            </dialog>
-
-                                        </td>
                                         <td className="text-center gap-2 flex flex-col">
                                             <button
                                                 onClick={() => handelApproved(item)}
@@ -196,6 +163,48 @@ const ManageClass = () => {
                     
                 </div>
             </div>
+            <dialog className="modal modal-bottom sm:modal-middle" ref={modalRef}>
+                <div className="modal-box max-w-xl rounded-3xl border border-slate-200 bg-white p-0 shadow-2xl">
+                    <div className="border-b border-slate-200 px-6 py-5">
+                        <p className="text-xs font-semibold uppercase tracking-[0.25em] text-amber-500">
+                            Admin Feedback
+                        </p>
+                        <h3 className="mt-2 text-2xl font-bold text-slate-900">Send feedback</h3>
+                        <p className="mt-2 text-sm text-slate-500">
+                            Share clear guidance for the instructor so they can improve the class submission.
+                        </p>
+                    </div>
+
+                    <div className="px-6 py-5">
+                        <textarea
+                            className="textarea min-h-[180px] w-full rounded-2xl border-slate-300 bg-slate-50 text-slate-800 focus:border-amber-400 focus:outline-none"
+                            placeholder="Write your feedback here..."
+                            value={feedback}
+                            onChange={(e) => setFeedback(e.target.value)}
+                        ></textarea>
+                    </div>
+
+                    <div className="flex flex-col-reverse gap-3 border-t border-slate-200 px-6 py-5 sm:flex-row sm:justify-end">
+                        <button
+                            type="button"
+                            className="btn rounded-full border-0 bg-slate-200 text-slate-800 hover:bg-slate-300"
+                            onClick={handleCloseModal}
+                        >
+                            Close
+                        </button>
+                        <button
+                            type="button"
+                            className="btn rounded-full border-0 bg-amber-400 text-slate-950 hover:bg-amber-300"
+                            onClick={handleUpdateFeedback}
+                        >
+                            Update Feedback
+                        </button>
+                    </div>
+                </div>
+                <form method="dialog" className="modal-backdrop">
+                    <button onClick={handleCloseModal}>close</button>
+                </form>
+            </dialog>
         </div>
     );
 };

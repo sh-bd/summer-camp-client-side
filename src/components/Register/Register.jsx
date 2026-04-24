@@ -3,7 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
-import Swal from "sweetalert2";
+import { ToastContainer, toast } from "react-toastify";
 import reg from '../../../public/reg.json';
 import { AuthContext } from "../../providers/AuthProvider";
 import SocialLogin from "../SocialLogin/SocialLogin";
@@ -13,9 +13,7 @@ const Register = () => {
     const { register, handleSubmit, watch, reset, formState: { errors } } = useForm();
     const [isButtonDisabled, setIsButtonDisabled] = useState(true);
     const navigate = useNavigate();
-    const [role, setRole] = useState("student");
-    
-
+    const [role] = useState("student");
 
     useEffect(() => {
         setIsButtonDisabled(watch("password") !== watch("c_password"));
@@ -40,123 +38,148 @@ const Register = () => {
 
             const responseData = await response.json();
             if (responseData.insertedId) {
-                logOut();
-                Swal.fire({
-                    position: 'top-end',
-                    icon: 'success',
-                    title: 'User created successfully.',
-                    showConfirmButton: false,
-                    timer: 1500
-                });
+                await logOut();
+                toast.success('User created successfully.');
                 reset();
                 navigate('/login');
             }
         } catch (error) {
             console.log(error);
+            toast.error('Could not complete registration.');
         }
     };
 
     return (
-        <div className="grid md:grid-cols-2 mx-auto">
+        <section className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm ring-1 ring-slate-200 sm:rounded-3xl">
             <Helmet>
                 <title>Registration - Language School</title>
             </Helmet>
-            <div>
-                <h2>
-                    <Lottie animationData={reg}></Lottie>
-                </h2>
-            </div>
-            <div className="hero">
-                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-slate-300">
-                    <div className="card-body">
-                        <h1 className="text-3xl text-center font-bold">Register</h1>
-                        <form onSubmit={handleSubmit(onSubmit)}>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Name</span>
-                                </label>
-                                <input
-                                    type="text"
-                                    {...register("name")}
-                                    placeholder="Name"
-                                    name="name"
-                                    className="input input-bordered"
-                                />
 
-                            </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Email</span>
-                                </label>
-                                <input
-                                    type="text"
-                                    {...register("email")}
-                                    placeholder="Email"
-                                    name="email"
-                                    className="input input-bordered"
-                                    required
-                                />
-                            </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Photo URL</span>
-                                </label>
-                                <input
-                                    type="text"
-                                    {...register("photoURL")}
-                                    placeholder="Photo URL"
-                                    name="photoURL"
-                                    className="input input-bordered"
-                                    required
-                                />
-                            </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Password</span>
-                                </label>
-                                <input type="password"  {...register("password", {
-                                    required: true,
-                                    minLength: 6,
-                                    maxLength: 15,
-                                    pattern: /(?=.*[A-Z])(?=.*[!@#$&*])/
-                                })} placeholder="Password" className="input input-bordered" />
-                                {errors.password?.type === 'required' && <p className="text-red-600">Password is required</p>}
-                                {errors.password?.type === 'minLength' && <p className="text-red-600">Password must be 6 characters</p>}
-                                {errors.password?.type === 'maxLength' && <p className="text-red-600">Password must be less than 15 characters</p>}
-                                {errors.password?.type === 'pattern' && <p className="text-red-600">Password must have one uppercase and one special character.</p>}
-                            </div>
-                            <div className="form-control">
-                                <label className="label">
-                                    <span className="label-text">Confirm Password</span>
-                                </label>
-                                <input
-                                    type="password"
-                                    {...register("c_password")}
-                                    placeholder="Confirm Password"
-                                    name="c_password"
-                                    className="input input-bordered"
-                                    required
-                                />
-                            </div>
-                            <div className="form-control mt-6">
-                                <button className="btn btn-primary" disabled={isButtonDisabled}>
-                                    Register
-                                </button>
-                            </div>
-                        </form>
-                        <p className="my-4 text-center">
-                            Already have an account?
-                            <Link
-                                className="text-orange-600 font-bold ps-2" to="/login">
-                                Login Now
-                            </Link>{" "}
+            <div className="grid items-center gap-8 px-5 py-8 md:grid-cols-2 md:px-8 lg:px-10 lg:py-10">
+                <div>
+                    <div className="mx-auto flex max-w-md items-center justify-center rounded-[2rem] bg-gradient-to-br from-amber-100 via-white to-slate-100 p-4">
+                        <Lottie animationData={reg}></Lottie>
+                    </div>
+                </div>
+
+                <div>
+                    <div className="mx-auto max-w-xl">
+                        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-amber-500">
+                            Create Account
                         </p>
-                        <SocialLogin></SocialLogin>
+                        <h1 className="mt-3 text-3xl font-bold text-slate-900 sm:text-4xl">
+                            Start learning on Language School.
+                        </h1>
+                        <p className="mt-4 max-w-lg text-base leading-8 text-slate-600">
+                            Join now to save courses, manage your dashboard, and connect with instructors.
+                        </p>
+
+                        <div className="mt-8 rounded-[1.75rem] border border-slate-200 bg-slate-50 p-5 shadow-inner sm:p-6">
+                            <form className="space-y-5" onSubmit={handleSubmit(onSubmit)}>
+                                <div className="grid gap-5 md:grid-cols-2">
+                                    <div className="form-control md:col-span-2">
+                                        <label className="label px-0">
+                                            <span className="label-text text-sm font-semibold text-slate-700">Name</span>
+                                        </label>
+                                        <input
+                                            type="text"
+                                            {...register("name")}
+                                            placeholder="Enter your full name"
+                                            className="input input-bordered h-12 rounded-2xl border-slate-300 bg-white"
+                                        />
+                                    </div>
+
+                                    <div className="form-control md:col-span-2">
+                                        <label className="label px-0">
+                                            <span className="label-text text-sm font-semibold text-slate-700">Email</span>
+                                        </label>
+                                        <input
+                                            type="email"
+                                            {...register("email")}
+                                            placeholder="Enter your email"
+                                            className="input input-bordered h-12 rounded-2xl border-slate-300 bg-white"
+                                            required
+                                        />
+                                    </div>
+
+                                    <div className="form-control md:col-span-2">
+                                        <label className="label px-0">
+                                            <span className="label-text text-sm font-semibold text-slate-700">Photo URL</span>
+                                        </label>
+                                        <input
+                                            type="text"
+                                            {...register("photoURL")}
+                                            placeholder="Paste your profile image URL"
+                                            className="input input-bordered h-12 rounded-2xl border-slate-300 bg-white"
+                                            required
+                                        />
+                                    </div>
+
+                                    <div className="form-control">
+                                        <label className="label px-0">
+                                            <span className="label-text text-sm font-semibold text-slate-700">Password</span>
+                                        </label>
+                                        <input
+                                            type="password"
+                                            {...register("password", {
+                                                required: true,
+                                                minLength: 6,
+                                                maxLength: 15,
+                                                pattern: /(?=.*[A-Z])(?=.*[!@#$&*])/
+                                            })}
+                                            placeholder="Create a password"
+                                            className="input input-bordered h-12 rounded-2xl border-slate-300 bg-white"
+                                        />
+                                        {errors.password?.type === 'required' && <p className="mt-2 text-sm text-red-600">Password is required.</p>}
+                                        {errors.password?.type === 'minLength' && <p className="mt-2 text-sm text-red-600">Password must be at least 6 characters.</p>}
+                                        {errors.password?.type === 'maxLength' && <p className="mt-2 text-sm text-red-600">Password must be less than 15 characters.</p>}
+                                        {errors.password?.type === 'pattern' && <p className="mt-2 text-sm text-red-600">Include one uppercase letter and one special character.</p>}
+                                    </div>
+
+                                    <div className="form-control">
+                                        <label className="label px-0">
+                                            <span className="label-text text-sm font-semibold text-slate-700">Confirm Password</span>
+                                        </label>
+                                        <input
+                                            type="password"
+                                            {...register("c_password")}
+                                            placeholder="Confirm password"
+                                            className="input input-bordered h-12 rounded-2xl border-slate-300 bg-white"
+                                            required
+                                        />
+                                        {watch("password") !== watch("c_password") && watch("c_password") && (
+                                            <p className="mt-2 text-sm text-red-600">Passwords do not match.</p>
+                                        )}
+                                    </div>
+                                </div>
+
+                                <div className="form-control pt-2">
+                                    <button
+                                        className="btn h-12 rounded-full border-0 bg-slate-900 text-white hover:bg-slate-800"
+                                        disabled={isButtonDisabled}
+                                    >
+                                        Register
+                                    </button>
+                                </div>
+                            </form>
+
+                            <p className="mt-5 text-center text-sm text-slate-600">
+                                Already have an account?
+                                <Link className="pl-2 font-semibold text-amber-600 hover:text-amber-500" to="/login">
+                                    Login now
+                                </Link>
+                            </p>
+
+                            <div className="mt-5">
+                                <SocialLogin />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-        </div>
+            <ToastContainer position="top-right" autoClose={1800} />
+        </section>
     );
 };
 

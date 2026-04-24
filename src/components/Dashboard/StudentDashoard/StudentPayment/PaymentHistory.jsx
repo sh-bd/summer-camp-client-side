@@ -29,20 +29,18 @@ const PaymentHistory = () => {
     };
 
     return (
-        <div className='h-full w-full'>
+        <div className='w-full space-y-5'>
             <Helmet>
                 <title>Payment History - Language School</title>
             </Helmet>
-            <div>
-                <SectionTitle heading='payment History' />
-            </div>
-            <div className="overflow-x-auto m-8 card shadow-2xl">
+            <SectionTitle heading='payment History' />
+            <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-xl">
                 <Fade>
-                    <table className="table table-zebra w-full">
+                    <table className="table table-zebra w-full min-w-[760px]">
                         <thead className='m-5'>
                             <tr className='bg-slate-400 text-black rounded-2xl'>
                                 <th className='text-center'>Serial</th>
-                                <th className='text-center'>Class Name</th>
+                                <th className='text-center'>Course Name</th>
                                 <th className='text-center'>Price</th>
                                 <th className='text-center'>Status</th>
                                 <th className='text-center'>Transaction ID</th>

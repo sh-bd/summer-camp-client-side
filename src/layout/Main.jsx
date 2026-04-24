@@ -5,14 +5,14 @@ import Footer from "../components/Footer/Footer";
 
 const Main = () => {
     return (
-        <div>
-            <div className='w-[80%] mx-auto'>
+        <div className="min-h-screen flex flex-col">
             <Header></Header>
-            <Outlet></Outlet>
+            <main className='w-[95%] mx-auto flex-1'>
+                <Outlet></Outlet>
+            </main>
             <div className='mt-5'>
                 <Footer></Footer>
             </div>
-        </div>
         </div>
     );
 };

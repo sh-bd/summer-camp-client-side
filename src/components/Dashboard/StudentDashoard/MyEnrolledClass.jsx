@@ -31,18 +31,18 @@ const MyEnrolledClass = () => {
     return (
         <div className='w-full h-full'>
             <Helmet>
-                <title>Enrolled Classes - Language School</title>
+                <title>Enrolled Courses - Language School</title>
             </Helmet>
-            <div className="overflow-x-auto">
-                <SectionTitle heading='Enrolled Classes' />
-                <div className="overflow-x-auto m-8 card shadow-2xl">
+            <div className="w-full">
+                <SectionTitle heading='Enrolled Courses' />
+                <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-xl">
                     <Fade>
-                        <table className="table table-zebra w-full">
+                        <table className="table table-zebra w-full min-w-[820px]">
                             <thead>
                                 <tr className='bg-slate-400 text-slate-800'>
                                     <th className='text-center'>Serial</th>
                                     <th className='text-center'>Photo</th>
-                                    <th className='text-center'>Class Name</th>
+                                    <th className='text-center'>Course Name</th>
                                     <th className='text-center'>Instructor Name</th>
                                     <th className='text-center'>Instructor Email</th>
                                     <th className='text-center'>Seat Available</th>

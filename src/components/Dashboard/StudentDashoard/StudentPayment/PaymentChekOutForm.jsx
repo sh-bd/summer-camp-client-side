@@ -107,7 +107,7 @@ const PaymentCheckoutForm = ({ price, loadedData }) => {
 
     return (
         <>
-            <form className="w-2/3 m-8 lg:mx-auto" onSubmit={handleSubmit}>
+            <form className="w-full max-w-2xl mx-auto px-4 py-4 sm:px-0" onSubmit={handleSubmit}>
                 <CardElement
                     options={{
                         style: {
@@ -130,8 +130,8 @@ const PaymentCheckoutForm = ({ price, loadedData }) => {
                     Pay
                 </button>
             </form>
-            {cardError && <p className="text-red-600 ml-8">{cardError}</p>}
-            {transactionId && <p className="text-blue-800">Payment completed! Your transaction ID is {transactionId}</p>}
+            {cardError && <p className="px-4 text-red-600 sm:px-0">{cardError}</p>}
+            {transactionId && <p className="px-4 text-blue-800 sm:px-0">Payment completed! Your transaction ID is {transactionId}</p>}
         </>
     );
 };

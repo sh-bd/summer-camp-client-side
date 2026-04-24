@@ -1,4 +1,3 @@
-
 import { Helmet } from 'react-helmet-async';
 import useAuth from "../../hooks/useAuth";
 import Banner from "../Banner/Banner";
@@ -8,28 +7,23 @@ import PopularClass from "../PopularClass/PopularClass";
 import PopularInstructor from "../PopularInstructor/PopularInstructor";
 
 const Home = () => {
-
     const { loading } = useAuth();
+
     if (loading) {
-        return <Loader></Loader>
+        return <Loader></Loader>;
     }
 
     return (
-        <>
+        <div className="space-y-14 py-6 sm:space-y-16 sm:py-8">
             <Helmet>
                 <title>Home - Language School</title>
             </Helmet>
+
             <Banner></Banner>
-            <div className="mt-14">
-                <PopularClass></PopularClass>
-            </div>
-            <div className="mt-14">
-                <PopularInstructor></PopularInstructor>
-            </div>
-            <div className="mt-14">
-                <ExtraSection></ExtraSection>
-            </div>
-        </>
+            <PopularClass></PopularClass>
+            <PopularInstructor></PopularInstructor>
+            <ExtraSection></ExtraSection>
+        </div>
     );
 };
 

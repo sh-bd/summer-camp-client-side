@@ -12,7 +12,7 @@ Client repository - [https://github.com/sh-bd/summer-camp-client-side](https://g
 Server repository - [https://github.com/sh-bd/summer-camp-server-side](https://github.com/sh-bd/summer-camp-server-side)
 
 ## Languages and Tools:
-<div align="left">
+<div align="left" style="display: flex; flex-wrap: nowrap; align-items: center; gap: 8px; overflow-x: auto; white-space: nowrap;">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg" height="40" width="52" alt="html5 logo"  />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg" height="40" width="52" alt="css3 logo"  />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" width="52" alt="javascript logo"  />

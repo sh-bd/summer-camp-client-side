@@ -27,3 +27,4 @@ dist-ssr
 # Local folder
 .netlify
 .firebase
+.vercel
